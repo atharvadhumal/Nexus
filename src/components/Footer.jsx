@@ -1,8 +1,19 @@
 import React from 'react';
-import logo from '../assets/images/nexusLogo.png';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/nexusLogo.png';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleLinkClick = (e) => {
+    scrollToTop();
+  };
+
   return (
     <footer className="bg-neutral-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -15,7 +26,7 @@ const Footer = () => {
               <span className="text-xl font-semibold">Nexus</span>
             </div>
             <p className="text-gray-400 text-sm">
-            Your Partner in Precision and Innovation
+              Your Partner in Precision and Innovation
             </p>
           </div>
 
@@ -23,9 +34,33 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">Why Us</Link></li>
-              <li><Link to="/service" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li>
+                <Link 
+                  to="/about" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={handleLinkClick}
+                >
+                  Why Us
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/service" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={handleLinkClick}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contact" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={handleLinkClick}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -39,8 +74,6 @@ const Footer = () => {
               <li>Email: info@nexus.com</li>
             </ul>
           </div>
-
-          
         </div>
 
         {/* Bottom Bar */}
@@ -50,8 +83,20 @@ const Footer = () => {
               © {new Date().getFullYear()} Nexus Engineering. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="/" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-              <a href="/" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+              <Link 
+                to="/privacy" 
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+                onClick={handleLinkClick}
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/terms" 
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+                onClick={handleLinkClick}
+              >
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
