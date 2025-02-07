@@ -1,0 +1,107 @@
+{
+    "services": [
+      {
+        "title": "Mechanical Engineering Design",
+        "content": "We offer detailed mechanical design services for equipment and systems, ensuring reliable and efficient performance throughout their operational lifecycle.",
+        "features": [
+          "Equipment design and specifications",
+          "Rotating and static equipment design (pumps, compressors, heat exchangers)",
+          "HVAC systems design",
+          "Pressure vessel and tank design",
+          "Mechanical data sheets and procurement support"
+        ]
+      },
+      {
+        "title": "Piping Engineering and Design",
+        "content": "Our piping design services ensure that your piping systems are safe, efficient, and compliant with industry regulations, providing layouts that integrate seamlessly with other disciplines.",
+        "features": [
+          "Plot Plan Development",
+          "Equipment layout",
+          "Piping layout and isometric drawings",
+          "Piping stress analysis",
+          "Material selection and specification",
+          "3D modeling and routing optimization"
+        ]
+      },
+      {
+        "title": "Electrical Engineering Design",
+        "content": "We deliver detailed electrical design solutions that power your facility efficiently while adhering to the latest safety and environmental standards.",
+        "features": [
+          "Power distribution system design",
+          "Electrical load analysis and short circuit studies",
+          "Single-line diagrams and wiring schematics",
+          "Electrical equipment specifications and procurement",
+          "Earthing, grounding, and lightning protection systems"
+        ]
+      },
+      {
+        "title": "Instrumentation and Control Systems Design",
+        "content": "Our team provides integrated instrumentation and control system designs that enhance operational efficiency and safety, tailored to meet your facility's specific needs.",
+        "features": [
+          "Control system architecture design",
+          "Instrumentation selection and specifications",
+          "Loop diagrams and control narratives",
+          "Distributed control systems (DCS) and programmable logic controllers (PLC)",
+          "Safety instrumented systems (SIS) and emergency shutdown systems (ESD)"
+        ]
+      },
+      {
+        "title": "Civil and Structural Engineering Design",
+        "content": "We provide detailed civil and structural engineering services for all types of industrial facilities, ensuring safety, stability, and regulatory compliance.",
+        "features": [
+          "Structural steel and concrete design",
+          "Foundation and footing design",
+          "Equipment supports and pipe racks",
+          "Building and infrastructure design",
+          "Structural analysis and integrity assessments"
+        ]
+      },
+      {
+        "title": "Process Engineering Design",
+        "content": "Our process engineering team develops safe, efficient, and optimized designs that meet operational requirements while improving process performance and minimizing risks.",
+        "features": [
+          "Process flow diagrams (PFD) and P&ID development",
+          "Heat and mass balance calculations",
+          "Equipment sizing and specification",
+          "Process simulation and optimization",
+          "Hazard and operability studies (HAZOP)"
+        ]
+      },
+      {
+        "title": "3D Modeling and CAD Services",
+        "content": "Using advanced 3D modeling tools, we create accurate representations of your project, improving design accuracy, coordination between disciplines, and construction planning.",
+        "features": [
+          "3D plant modeling (AutoCAD, E3D, SP3D, CADWORX, AutoCAD PLANT3D)",
+          "Clash detection and resolution",
+          "Detailed design and construction drawings",
+          "Virtual walk-throughs and design reviews",
+          "As-built modeling and documentation"
+        ]
+      },
+      {
+        "title": "Procurement Support and Vendor Coordination",
+        "content": "We assist clients with the procurement process, ensuring that all materials and equipment are specified correctly and procured efficiently.",
+        "features": [
+          "Preparation of technical specifications",
+          "Vendor bid evaluations and technical clarifications",
+          "Equipment data sheets and material requisitions",
+          "Coordination with vendors and suppliers",
+          "Inspection and quality assurance for procured items"
+        ]
+      },
+      {
+        "title": "Construction Support and Field Engineering",
+        "content": "Our construction support services ensure that designs are implemented accurately on-site, offering real-time assistance to address any engineering challenges during construction."
+      },
+      {
+        "title": "Safety and Compliance Engineering",
+        "content": "We ensure that all our detailed engineering designs adhere to local and international codes and safety regulations, mitigating risks and ensuring compliance across the project lifecycle.",
+        "features": [
+          "Compliance with ASME, API, IEC, and other codes",
+          "Safety systems design and fire protection, HAZOP, SIL, and safety studies",
+          "Environmental impact assessments",
+          "Regulatory compliance and permitting support"
+        ]
+      }
+    ]
+  }
