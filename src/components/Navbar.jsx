@@ -1,16 +1,66 @@
-import {Menu, X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import React from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/images/nexusLogo.png';
 import { navItems } from '../constants/index';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
     const toggleNavbar = () => {
-        setMobileDrawerOpen(!mobileDrawerOpen)
-    }
+        setMobileDrawerOpen(!mobileDrawerOpen);
+    };
+
+    const handleNavItemClick = () => {
+        setMobileDrawerOpen(false);
+    };
+
+    const menuVariants = {
+        initial: {
+            x: "100%",
+            opacity: 0
+        },
+        animate: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+            }
+        },
+        exit: {
+            x: "100%",
+            opacity: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+            }
+        }
+    };
+
+    const overlayVariants = {
+        initial: { opacity: 0 },
+        animate: { opacity: 0.5 },
+        exit: { opacity: 0 }
+    };
+
+    const menuItemVariants = {
+        initial: { y: 20, opacity: 0 },
+        animate: i => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: i * 0.1,
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+            }
+        })
+    };
 
     return (
         <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
@@ -30,30 +80,73 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <div className="lg:hidden flex items-center">
-                        <button onClick={toggleNavbar}
-                        className="hover:text-gray-400 transition-colors duration-300"
+                    {!mobileDrawerOpen && (
+                        <motion.button 
+                            onClick={toggleNavbar}
+                            className="lg:hidden hover:text-gray-400 transition-colors duration-300"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
                         >
-                            {mobileDrawerOpen ? <X /> : <Menu />}
-                        </button>
-                    </div>
+                            <Menu />
+                        </motion.button>
+                    )}
                 </div>
-                {mobileDrawerOpen && (
-                    <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-                        <ul>
-                            {navItems.map((item, index)=> (
-                                <li key={index} className="py-3 text-xl">
-                                    <Link to={item.href}
-                                    className="text-gray-300 transition-colors duration-300 hover:text-white"
-                                    >{item.label}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+
+                <AnimatePresence>
+                    {mobileDrawerOpen && (
+                        <>
+                            <motion.div 
+                                className="fixed inset-0 bg-black lg:hidden"
+                                variants={overlayVariants}
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                onClick={toggleNavbar}
+                            />
+                            <motion.div 
+                                className="fixed right-0 top-0 z-20 bg-neutral-900 w-1/2 h-screen lg:hidden"
+                                variants={menuVariants}
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                            >
+                                <div className="relative p-8 flex flex-col justify-center items-center h-full">
+                                    <motion.button 
+                                        onClick={toggleNavbar}
+                                        className="absolute top-4 right-4 hover:text-gray-400 transition-colors duration-300"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <X size={24} />
+                                    </motion.button>
+                                    <ul className="space-y-6">
+                                        {navItems.map((item, index) => (
+                                            <motion.li 
+                                                key={index}
+                                                custom={index}
+                                                variants={menuItemVariants}
+                                                initial="initial"
+                                                animate="animate"
+                                                className="py-3 text-xl"
+                                            >
+                                                <Link 
+                                                    to={item.href}
+                                                    className="text-gray-300 transition-colors duration-300 hover:text-white"
+                                                    onClick={handleNavItemClick}
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            </motion.li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </motion.div>
+                        </>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
