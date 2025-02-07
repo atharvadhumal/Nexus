@@ -7,7 +7,7 @@ const DesignedBy = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-4">
           <p className="text-center font-light">
-            <span className="text-gray-400 text-sm">Designed By </span>
+            <span className="text-gray-400 text-sm">Developed By </span>
             <a
               href="https://github.com/atharvadhumal"
               target="_blank"
