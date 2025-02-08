@@ -26,7 +26,7 @@ const Footer = () => {
               <span className="text-xl font-semibold">Nexus</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Your Partner in Precision and Innovation
+            Your Vision, Our Design.
             </p>
           </div>
 

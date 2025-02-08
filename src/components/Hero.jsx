@@ -13,8 +13,8 @@ const Hero = () => {
             alt="Construction Site" 
           />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
+        <div className="absolute inset-0 flex items-center justify-center -translate-y-8">
+          <div className="text-center space-y-2">
             <div className="flex items-center justify-center gap-2">
               <img 
                 src={logo} 
@@ -25,8 +25,8 @@ const Hero = () => {
                 NEXUS
               </h1> 
             </div>
-            <p className=" text-base sm:text-2xl md:text-3xl text-white">
-              Your Partner in Precision and Innovation
+            <p className="text-base sm:text-2xl md:text-3xl text-white translate-x-12 ml-8">
+              Your Vision, Our Design.
             </p>
           </div>
         </div>
