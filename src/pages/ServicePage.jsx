@@ -1,5 +1,5 @@
 import React from 'react';
-import plan from '../assets/images/plan.jpg';
+import plan from '../assets/images/services.jpg';
 import servicesData from '../services.json';
 
 const ServicePage = () => {
