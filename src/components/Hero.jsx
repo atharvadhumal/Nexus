@@ -14,22 +14,24 @@ const Hero = () => {
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center -translate-y-8">
-          <div className="text-center space-y-2">
-            <div className="flex items-center justify-center gap-2">
-              <img 
-                src={logo} 
-                alt="Nexus Logo" 
-                className="h-[3rem] sm:h-[4.5rem] md:h-[5.5rem] lg:h-[6.5rem] w-auto"
-              />
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-wide">
-                NEXUS
-              </h1> 
+          <div className="text-center">
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-2">
+                <img 
+                  src={logo} 
+                  alt="Nexus Logo" 
+                  className="h-[2.5rem] sm:h-[3.5rem] md:h-[4.5rem] lg:h-[5.5rem] w-auto"
+                />
+                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-wide">
+                  NEXUS
+                </h1> 
+              </div>
+              <p className="text-sm sm:text-2xl md:text-3xl text-white mt-1 translate-x-4 sm:translate-x-5">
+                Your Vision, Our Design.
+              </p>
             </div>
-            <p className="text-base sm:text-2xl md:text-3xl text-white translate-x-12 ml-8">
-              Your Vision, Our Design.
-            </p>
           </div>
-        </div>
+        </div>                              
       </div>
     </section>
   )
