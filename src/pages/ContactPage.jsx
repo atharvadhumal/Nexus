@@ -34,8 +34,10 @@ const ContactPage = () => {
   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 max-w-md mx-auto shadow-lg">
     <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">CONTACT US</h2>
     <div className="space-y-4">
-      <h3 className="text-lg md:text-xl text-white">Phone: Your number</h3>
-      <h3 className="text-lg md:text-xl text-white">Email: Your email</h3>
+      <h3 className="text-lg md:text-xl text-white">IND : +91 8655126864</h3>
+      <h3 className="text-lg md:text-xl text-white">KSA : +966 559545264</h3>
+      <h3 className="text-lg md:text-xl text-white">JPN : +81 07091657255</h3>
+      <h3 className="text-lg md:text-xl text-white">Email: info@nexus-eng.in</h3>
       <p className="text-white/80 text-base md:text-lg mt-6 text-center italic">
         We look forward to connecting with you!
       </p>

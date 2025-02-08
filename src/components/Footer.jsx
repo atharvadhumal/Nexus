@@ -68,10 +68,38 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>address</li>
-              <li>address</li>
-              <li>Phone: 12345678</li>
-              <li>Email: info@nexus.com</li>
+              <li>
+                <a 
+                  href="tel:+918655126864" 
+                  className="hover:text-white transition-colors"
+                >
+                  IND : +91 8655126864
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+966559545264" 
+                  className="hover:text-white transition-colors"
+                >
+                  KSA : +966 559545264
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+8107091657255" 
+                  className="hover:text-white transition-colors"
+                >
+                  JPN : +81 07091657255
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:info@nexus-eng.in"
+                  className="hover:text-white transition-colors"
+                >
+                  Email: info@nexus-eng.in
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -84,14 +112,14 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link 
-                to="/privacy" 
+                to="/" 
                 className="text-gray-400 hover:text-white text-sm transition-colors"
                 onClick={handleLinkClick}
               >
                 Privacy Policy
               </Link>
               <Link 
-                to="/terms" 
+                to="/" 
                 className="text-gray-400 hover:text-white text-sm transition-colors"
                 onClick={handleLinkClick}
               >
