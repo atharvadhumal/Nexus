@@ -14,7 +14,13 @@ const Navbar = () => {
     };
 
     const handleNavItemClick = () => {
+        // Close mobile drawer if open
         setMobileDrawerOpen(false);
+        // Scroll to top smoothly
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
     const menuVariants = {
@@ -66,15 +72,21 @@ const Navbar = () => {
         <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
             <div className="container px-4 mx-auto relative text-sm">
                 <div className="flex justify-between lg:justify-center items-center">
-                    <Link to="/" className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity duration-300">
+                    <Link 
+                        to="/" 
+                        className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity duration-300"
+                        onClick={handleNavItemClick}
+                    >
                         <img className='h-9 w-10 mr-0 transition-all duration-300 group-hover:filter group-hover:brightness-125 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]' src={logo} alt="logo"/>
                         <span className="text-3xl tracking-tight font-semibold">Nexus</span>
                     </Link>
                     <ul className='hidden lg:flex ml-14 space-x-12'>
                         {navItems.map((item, index) => (    
                             <li key={index}>
-                                <Link to={item.href}
-                                className="relative py-2 text-white transition-colors duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                                <Link 
+                                    to={item.href}
+                                    className="relative py-2 text-white transition-colors duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                                    onClick={handleNavItemClick}
                                 >{item.label}</Link>
                             </li>
                         ))}
